@@ -409,6 +409,12 @@
                                         </ul>
                                     </li>
 
+                                    <li class="sidebar-menu-item <?php if ($page == 'return_history') echo 'active';?>">
+                                        <a class="sidebar-menu-button" href="return_history">
+                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">history</i>
+                                            <span class="sidebar-menu-text">Return History</span>
+                                        </a>
+                                    </li>
 
                                     <li class="sidebar-menu-item <?php if ($page == 'products' || $page == 'create_grn' || $page == 'view_grn_list' || $page == 'add_product_price_batch' || $page == 'category_discounts') echo 'active open';?>">
                                         <a class="sidebar-menu-button" data-toggle="collapse" href="#products_menu">
@@ -675,6 +681,12 @@
                                                 </a>
                                             </li>
                                             
+                                            <li class="sidebar-menu-item <?php if ($page == 'product_selling_list') echo 'active';?>">
+                                                <a class="sidebar-menu-button" href="product_selling_list.php">
+                                                    <span class="sidebar-menu-text">Products Bin</span>
+                                                </a>
+                                            </li> 
+                                            
                                             <li class="sidebar-menu-item <?php if ($page == 'category_discounts') echo 'active';?>">
                                                 <a class="sidebar-menu-button" href="category_discounts.php">
                                                     <span class="sidebar-menu-text">Add Discounts For Category</span>
@@ -786,7 +798,7 @@
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item <?php if ($page == 'attendance_report') echo 'active';?>">
-                                                <a class="sidebar-menu-button" href="attendance_repor.php">
+                                                <a class="sidebar-menu-button" href="attendance_report.php">
                                                     <span class="sidebar-menu-text">Sales-Rep Attendence</span>
                                                 </a>
                                             </li>
@@ -801,7 +813,7 @@
                                                 </a>
                                             </li>
                                             <li class="sidebar-menu-item <?php if ($page == 'sales_rep') echo 'active';?>">
-                                                <a class="sidebar-menu-button" href="sales_rep.php.php">
+                                                <a class="sidebar-menu-button" href="sales_rep.php">
                                                     <span class="sidebar-menu-text">Sales-Rep Performence</span>
                                                 </a>
                                             </li>

@@ -48,6 +48,7 @@ if(isset($_POST['list']) && isset($_POST['payment_method_id']) && isset($_POST['
 		$outlet = htmlspecialchars($_POST['outlet']);
 		$route = htmlspecialchars($_POST['route']);
 		$distributor_id = htmlspecialchars($_POST['distributor_id']);
+        $invoice_note = htmlspecialchars($_POST['invoice_note']);
 
 		$is_return = htmlspecialchars($_POST['is_return']);
 		$return_type = htmlspecialchars($_POST['return_type']);
@@ -239,7 +240,8 @@ if(isset($_POST['list']) && isset($_POST['payment_method_id']) && isset($_POST['
 
 		if($conn->query("INSERT INTO tbl_order VALUES(null,'$invoiceId','0','$date','$time',-1,-1,-1,'$timeStamp','$paymentStatus',0,0,'$payment_method_id','web','$session_id','$outlet','$route','$distributor_id',0)")){
 
-			$orderKey = mysqli_insert_id($conn);
+            $orderKey = mysqli_insert_id($conn);
+            $conn->query("INSERT INTO tbl_invoice_note VALUES(null,'$invoiceId','$timeStamp','$invoice_note')");
 
 
 
@@ -453,6 +455,10 @@ if(isset($_POST['list']) && isset($_POST['payment_method_id']) && isset($_POST['
 			$output['order_id'] = base64_encode($orderKey);
 			$output['type'] = "so_";
 			
+    //         } else {
+				// 		$output['result'] = false;
+				// 		$output['msg'] = "Invoice note saving failed, please try again.";
+				// 	}
 
 		}else{
 			$output['result']=false;

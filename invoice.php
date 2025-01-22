@@ -129,6 +129,9 @@
                             #sidebar{
                               visibility: hidden;
                             }
+                            #credit-text{
+                                display: none;
+                            }
                             #topbar{
                               display: none;
                             }
@@ -183,11 +186,19 @@
                             }
                             
                             #area-letter-head{
-                                margin-top:-90px;
+                                margin-top:0;
                             }
                             
                             #area-card{
                                 border:none;
+                            }
+                            
+                            #payment-history{
+                                display: none;
+                            }
+                            
+                             #applied-changes{
+                                display: none;
                             }
                             
                             #letter-logo{
@@ -224,6 +235,12 @@
                                 display:none !important;
                             }
                             
+                            #tbl-item th, #tbl-item td {
+                               
+                                padding: 10px; /* Decreased padding for print to reduce row height */
+                              
+                            }
+                            
                             
                             
                           }
@@ -233,20 +250,14 @@
 
     <div class="preloader"></div>
 
-    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px" data-fullbleed>
-        <div class="mdk-drawer-layout__content">
-
-            <!-- Header Layout -->
-            <div class="mdk-header-layout js-mdk-header-layout" data-has-scrolling-region>
-
-                <!-- Header -->
+     <div><div><div>
 
                 <?php include_once('controls/header.php'); ?>
 
                 <!-- // END Header -->
 
                 <!-- Header Layout Content -->
-                <div class="mdk-header-layout__content mdk-header-layout__content--fullbleed mdk-header-layout__content--scrollable page">
+                <div>
 
 
                     <div class="container-fluid page__container">
@@ -273,8 +284,8 @@
                                     
                                     <div class="row">
                                         <div class="col-md-12 text-center">
-                                           <b> <span style="font-size:17px" id="header-text">No:09,Moragahapitiya Estate,Balagolla,Kandy.</span></b></br>
-                                           <b> <span style="font-size:17px" id="header-text">Tel: 0812375383 , E-mail: goallanka@gmail.com</span></b></br>
+                                           <b> <span style="font-size:17px" id="header-text">No:09,Moragahapitiya Estate,Balagolla,Kandy , Tel: 0812375383 , E-mail: goallanka@gmail.com</span></b></br>
+                                           <!--<b> <span style="font-size:17px" id="header-text">Tel: 0812375383 , E-mail: goallanka@gmail.com</span></b></br>-->
                                         </div>
                                         
                                         
@@ -286,7 +297,7 @@
                                     
                                     <div class="row" style="margin-top:5px">
                                         <div class="col-md-12 text-center">
-                                            <h2>Invoice <font style="font-size: 15px;">(<?php if($PaymentMethod=='0' || $PaymentMethod=='1' || $PaymentMethod=='3'){echo 'Cash Invoice';}else{echo 'Credit invoice';} ?><?php if($PaymentStatus=='0'){ ?> -  <font style="color: #FF0000; font-weight: 700;">Not Paid</font><?php }else{?> -  <font style="color: #26580F; font-weight: 700;">Paid</font><?php } ?>)</font></h2>
+                                            <h2>Invoice <font id="credit-text" style="font-size: 15px;">(<?php if($PaymentMethod=='0' || $PaymentMethod=='1' || $PaymentMethod=='3'){echo 'Cash Invoice';}else{echo 'Credit invoice';} ?><?php if($PaymentStatus=='0'){ ?> -  <font style="color: #FF0000; font-weight: 700;">Not Paid</font><?php }else{?> -  <font style="color: #26580F; font-weight: 700;">Paid</font><?php } ?>)</font></h2>
                                         </div>
                                     </div>
                                         
@@ -299,15 +310,16 @@
                                                 <tbody>
                                                     <tr>
                                                         <td style="float: left;"><strong>Shop Name :</strong></td>
-                                                        <td style="font-size: 17px; float: right;"><?php echo $OutletName; ?></td>
+                                                        <td style="font-size: 17px; float: left;"><?php echo $OutletName; ?></td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td style="float: left;"><strong>Address :</strong></td>
+                                                        <td style="font-size: 15px; float: left;"><?php echo $OutletAddress; ?></td>
                                                     </tr>
                                                     <tr>
                                                         <td style="float: left;"><strong>Contact :</strong></td>
-                                                        <td style="font-size: 17px; float: right;"><?php echo $OutletContactNumber; ?></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="float: left;"><strong>Address :</strong></td>
-                                                        <td style="font-size: 15px; float: right;"><?php echo $OutletAddress; ?></td>
+                                                        <td style="font-size: 17px; float: left;"><?php echo $OutletContactNumber; ?></td>
                                                     </tr>
                                                     
                                                     
@@ -319,7 +331,7 @@
                                             
                                         </div>
                                         
-                                         <div style="width: 45%; text-align: center;">
+                                         <div style="width: 30%;">
                                                 
                                                 <table>
                                                     <tbody>
@@ -360,19 +372,19 @@
 
                                     <div class="row">
                                         <div class="col-md-12 well invoice-body">
-                                            <table class="table table-bordered">
-                                                <thead>
+                                            <table id="tbl-item" class="table table-bordered">
+                                                <thead style="border: 2px solid black;">
                                                     <tr>
-                                                        <th  style="font-size: 17px">No</th>
-                                                        <th  id="print-image"style="font-size: 17px">Product Image</th>
-                                                        <th style="font-size: 17px; width: 50%;">Product Name</th>
-                                                        <th style="font-size: 17px; width: 15%; text-align:center">Qty</th>
-                                                        <th style="font-size: 17px">Unit Price</th>
-                                                        <th style="font-size: 17px">Discount</th>
-                                                        <th style="font-size: 17px; width: 30%; text-align:center;" >TOTAL</th>
+                                                        <th  style="font-size: 17px; color:black;">No</th>
+                                                        <th  id="print-image"style="font-size: 17px; color:black;">Product Image</th>
+                                                        <th style="font-size: 17px; width: 50%; color:black;">Product Name</th>
+                                                        <th style="font-size: 17px; width: 15%; text-align:center; color:black;">Qty</th>
+                                                        <th style="font-size: 17px; color:black;">Unit Price</th>
+                                                        <th style="font-size: 17px; color:black;">Discount</th>
+                                                        <th style="font-size: 17px; width: 30%; text-align:center; color:black;" >TOTAL</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody id="order-area">
+                                                <tbody id="order-area" style="border: 2px solid black;">
                                                     <?php
                                                         $Productsql = "SELECT * FROM tbl_order_item_details toid INNER JOIN tbl_item tit ON toid.itemId=tit.itemId WHERE toid.order_id='$InvoiceID'";
 
@@ -413,7 +425,7 @@
                                                     ////////Calculation//////////////
                                                     ?>
                                                     
-                                                        <tr>
+                                                        <tr style="border: 2px solid black;">
                                                             <!-- <td><?php echo $ItemCode; ?></td> -->
                                                             <td style="font-weight: bold;"><?php echo $item_no; ?></td>
 
@@ -549,8 +561,8 @@
                                                             <tr>
                                                         <td></td>
                                                         <td colspan="2">&nbsp;</td>
-                                                        <td colspan="2"><strong>Total</strong></td>
-                                                        <td colspan="2"><strong class="pull-right" id="grand-total"><?php echo number_format($GrandTotal,2); ?> <span style="color:red">( Changes Applied - <?php echo $message;?> )</span></strong></td>
+                                                        <td colspan="2"><strong>Grand Total</strong></td>
+                                                        <td colspan="2"><strong class="pull-right" id="grand-total"><?php echo number_format($GrandTotal,2); ?> <span id="applied-changes" style="color:red">( Changes Applied - <?php echo $message;?> )</span></strong></td>
                                                     </tr>
                                                            
                                                            <?php
@@ -563,7 +575,7 @@
                                                     <tr>
                                                         <td></td>
                                                         <td colspan="2">&nbsp;</td>
-                                                        <td colspan="2"><strong>Total</strong></td>
+                                                        <td colspan="2"><strong>Grand Total</strong></td>
                                                         <td colspan="2"><strong class="pull-right" id="grand-total"><?php echo number_format($GrandTotal,2); ?></strong></td>
                                                     </tr>
                                                                 
@@ -664,6 +676,11 @@
 
                                         <button onclick="window.print();" class="btn btn-dark btn-sm pull-right" id="btn-print"><i class="fa fa-print"></i> Print</button>
 
+                                         <a href="create_invoice.php" class="btn btn-primary btn-sm" id="btn-print"><span class="glyphicon glyphicon-print" aria-hidden="true"></span><i class="fa fa-file-text"></i> Create Invoice</a>
+                                         <a href="dashboard.php" class="btn btn-success btn-sm" id="btn-print"><span class="glyphicon glyphicon-print" aria-hidden="true"></span><i class="fa fa-home"></i> Home</a>
+                                         <a href="invoice_history.php" class="btn btn-warning btn-sm" id="btn-print"><span class="glyphicon glyphicon-print" aria-hidden="true"></span><i class="fa fa-history"></i> Invoice History</a>
+
+
                                         <?php if ($DeliveryStatus=='0') { ?>
                                             <input type="hidden" id="invoice_id_sent" value="<?php echo $InvoiceID; ?>">
                                             <button type="submit" class="btn btn-info btn-sm pull-right" id="btn-stock-sent"><i class="fa fa-paper-plane-o"></i> Sent</button>
@@ -695,7 +712,7 @@
 
                       <?php if($PaymentMethod=='2'){ ?>
                     <!--Start Payment History -->
-                    <div class="container-fluid page__container">
+                    <div id="payment-history" class="container-fluid page__container">
                         <div class="card card-form">
                             <div class="row no-gutters">
 
@@ -862,7 +879,7 @@
         </div>
         <!-- // END drawer-layout__content -->
 
-        <?php include_once('controls/sidebar.php'); ?>
+       
     </div>
     <!-- // END drawer-layout -->
 

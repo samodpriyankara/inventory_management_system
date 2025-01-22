@@ -300,3 +300,17 @@ Stack trace:
 [05-Jun-2024 07:04:12 UTC] PHP Warning:  Division by zero in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/save_order_details.php on line 315
 [05-Jun-2024 07:04:12 UTC] PHP Notice:  Undefined variable: free_qty5 in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/save_order_details.php on line 315
 [15-Aug-2024 15:58:03 Asia/Colombo] PHP Warning:  A non-numeric value encountered in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/amend_invoice.php on line 66
+[21-Aug-2024 16:09:31 Asia/Colombo] PHP Warning:  A non-numeric value encountered in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/amend_invoice.php on line 81
+[27-Aug-2024 09:50:11 UTC] PHP Notice:  Undefined index: invoice_note in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/save_order_details.php on line 51
+[28-Aug-2024 16:09:43 Asia/Colombo] PHP Warning:  A non-numeric value encountered in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/amend_invoice.php on line 81
+[16-Oct-2024 09:14:46 Asia/Colombo] PHP Warning:  A non-numeric value encountered in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/amend_invoice.php on line 66
+[19-Nov-2024 11:28:30 Asia/Colombo] PHP Notice:  Undefined index: ID in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/amend_invoice.php on line 41
+[19-Nov-2024 10:31:47 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Can't connect to local server through socket '/var/lib/mysql/mysql.sock' (2) in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/database/db.php on line 37
+[27-Dec-2024 09:35:30 Asia/Colombo] PHP Warning:  A non-numeric value encountered in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/amend_invoice.php on line 66
+[27-Dec-2024 10:24:27 Asia/Colombo] PHP Warning:  A non-numeric value encountered in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/amend_invoice.php on line 81
+[27-Dec-2024 10:26:16 Asia/Colombo] PHP Warning:  A non-numeric value encountered in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/amend_invoice.php on line 66
+[27-Dec-2024 10:44:06 Asia/Colombo] PHP Warning:  A non-numeric value encountered in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/amend_invoice.php on line 66
+[27-Dec-2024 11:47:30 Asia/Colombo] PHP Warning:  A non-numeric value encountered in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/amend_invoice.php on line 81
+[27-Dec-2024 13:29:08 Asia/Colombo] PHP Warning:  A non-numeric value encountered in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/amend_invoice.php on line 66
+[08-Jan-2025 09:40:54 Asia/Colombo] PHP Warning:  A non-numeric value encountered in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/amend_invoice.php on line 81
+[08-Jan-2025 13:37:17 Asia/Colombo] PHP Warning:  A non-numeric value encountered in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/scripts/amend_invoice.php on line 81

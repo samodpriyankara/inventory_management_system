@@ -416,7 +416,12 @@
 
                                       </table>
                                        
+                                      <br>
+                                      <label style="color: green;" >Invoice Note</label>
+                                      <input class="form-control" id="txt_invoice_note" placeholder="enter invoice note">
 
+
+                                      <br>
 
 
                                        <button class="btn btn-primary" id="btn-save-invoice" style="padding: 10px;">SAVE INVOICE</button>
@@ -906,6 +911,7 @@
                 outlet:$("#txt_outlet").val(),
                 route:$("#route_name").val(),
                 distributor_id:$("#txt_dist").val(),
+                invoice_note: $("#txt_invoice_note").val(),
                 is_return:$("#txt_order_type").val(),
                 return_type:$("#txt_return_type").val(),
                 

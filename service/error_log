@@ -66,3 +66,13 @@
 [31-Jan-2024 15:04:16 Asia/Colombo] PHP Notice:  file_get_contents(): read of 8192 bytes failed with errno=21 Is a directory in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/service/getRoutesAndOutlets.php on line 75
 [31-Jan-2024 15:04:16 Asia/Colombo] PHP Notice:  file_get_contents(): read of 8192 bytes failed with errno=21 Is a directory in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/service/getRoutesAndOutlets.php on line 75
 [31-Jan-2024 15:04:16 Asia/Colombo] PHP Notice:  file_get_contents(): read of 8192 bytes failed with errno=21 Is a directory in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/service/getRoutesAndOutlets.php on line 75
+[21-Aug-2024 22:09:25 Asia/Colombo] PHP Notice:  Undefined index: username in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/service/signin.php on line 13
+[21-Aug-2024 22:18:36 Asia/Colombo] PHP Notice:  Undefined index: username in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/service/signin.php on line 87
+[21-Aug-2024 22:18:39 Asia/Colombo] PHP Notice:  Undefined index: username in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/service/signin.php on line 87
+[21-Aug-2024 22:28:20 Asia/Colombo] PHP Notice:  Undefined index: username in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/service/signin.php on line 87
+[21-Aug-2024 22:32:33 Asia/Colombo] PHP Notice:  Undefined index: username in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/service/signin.php on line 17
+[21-Aug-2024 22:32:33 Asia/Colombo] PHP Notice:  Undefined index: password in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/service/signin.php on line 18
+[21-Aug-2024 22:38:48 Asia/Colombo] PHP Notice:  Undefined index: username in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/service/signin.php on line 13
+[21-Aug-2024 22:38:48 Asia/Colombo] PHP Notice:  Undefined index: password in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/service/signin.php on line 14
+[21-Aug-2024 22:40:28 Asia/Colombo] PHP Notice:  Undefined index: username in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/service/signin.php on line 13
+[21-Aug-2024 22:40:28 Asia/Colombo] PHP Notice:  Undefined index: password in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/service/signin.php on line 14

@@ -178,12 +178,12 @@
                                     <div class="row">
                                         <div class="col-md-8" id="company-details">
                                             <img src="assets/img/shop_logo.png" style="width: 30%;" class="img-rounded logo">
-                                            <address>
-                                                <strong>Lasantha Distributores</strong><br>
-                                                No: 145<br>
-                                                Gawarawela, Demodara<br>
-                                                +94-77 98 888 98<br>
-                                                lasanthajayaweera164@gmail.com
+                                               <address>
+                                                <strong>Goal Lanka Marketing (PVT) LTD</strong><br>
+                                                09, Moragahapitiya Estate,<br>
+                                                Balagolla,Sri Lanka.<br>
+                                                +94773 895 383 / +94812 375 383<br>
+                                                globalwin20@gmail.com
                                             </address>
                                         </div>
                                         <div class="col-md-4 well" id="outlet-details">

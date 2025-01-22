@@ -80,6 +80,7 @@
                                         <table class="table mb-0 thead-border-top-0" id="ReturnTable">
                                             <thead>
                                                 <tr>
+                                                    <th style="display: none;">#</th>
                                                     <th>Invoice Id</th>
                                                     <th>Return Type</th>
                                                     <th>App Version</th>
@@ -92,9 +93,9 @@
                                             <tbody class="list">
                                                 <?php
                                                     if($is_distributor){
-                                                        $ReturnInvoicesql = "SELECT * FROM tbl_return_order tor INNER JOIN tbl_route tro ON tor.route_id=tro.route_id WHERE distributor_id = '$user_id'  ORDER BY tor.id DESC";
+                                                        $ReturnInvoicesql = "SELECT * FROM tbl_return_order tor INNER JOIN tbl_route tro ON tor.route_id=tro.route_id WHERE distributor_id = '$user_id'";
                                                     }else{
-                                                        $ReturnInvoicesql = "SELECT * FROM tbl_return_order tor INNER JOIN tbl_route tro ON tor.route_id=tro.route_id ORDER BY tor.id DESC";
+                                                        $ReturnInvoicesql = "SELECT * FROM tbl_return_order tor INNER JOIN tbl_route tro ON tor.route_id=tro.route_id";
                                                     }
 
                                                         $ReturnInvoicers=$conn->query($ReturnInvoicesql);
@@ -135,6 +136,7 @@
                                                     }
                                                 ?>
                                                 <tr>
+                                                    <td style="display: none;"><?php echo $Id; ?></td>
                                                     <td><?php echo $OrderId; ?></td>
                                                     <td>
                                                         <?php if($ReturnType=='1'){ echo 'Damage Return'; }else{ echo 'Sales Return'; } ?>
@@ -233,7 +235,9 @@
 
     <script>
         $(document).ready( function () {
-            $('#ReturnTable').DataTable();
+            $('#ReturnTable').DataTable({
+                 "order": [[ 0, "desc" ]]
+            });
         } );
     </script>
 

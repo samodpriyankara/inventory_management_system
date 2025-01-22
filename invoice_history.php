@@ -89,6 +89,7 @@
                                                     <th>Route</th>
                                                     <th>Date</th>
                                                     <th class="text-right">Invoice Amount</th>
+                                                    <th>Invoice Note</th>
                                                     <th></th>
                                                 </tr>
                                             </thead>
@@ -96,9 +97,9 @@
                                                 <?php
 
                                                     if($is_distributor){
-                                                        $CashInvoicesql = "SELECT * FROM tbl_order tor INNER JOIN tbl_route tro ON tor.route_id=tro.route_id WHERE tor.distributor_id = '$user_id'";
+                                                         $CashInvoicesql = "SELECT * FROM tbl_order tor INNER JOIN tbl_route tro ON tor.route_id=tro.route_id WHERE tor.distributor_id = '$user_id' ORDER BY tor.invoice_date DESC , tor.invoice_time DESC";
                                                     }else{
-                                                        $CashInvoicesql = "SELECT * FROM tbl_order tor INNER JOIN tbl_route tro ON tor.route_id=tro.route_id";
+                                                        $CashInvoicesql = "SELECT * FROM tbl_order tor INNER JOIN tbl_route tro ON tor.route_id=tro.route_id ORDER BY tor.invoice_date DESC, tor.invoice_time DESC";
                                                     }
 
                                                     $CashInvoicers=$conn->query($CashInvoicesql);
@@ -112,14 +113,23 @@
                                                         $AppVersion=$CIrow[13];   
                                                         $OutletId=$CIrow[15];   
                                                         $RouteName=$CIrow[20];   
-                                                        
-                                                        
+                                                       
                                                         
                                                         $OutletDetailsSql = "SELECT * FROM tbl_outlet WHERE outlet_id='$OutletId' ";
                                                         $OutletDetailsrs=$conn->query($OutletDetailsSql);
                                                         if($ODrow=$OutletDetailsrs->fetch_array())
                                                         {
                                                             $OutletName=$ODrow[1];  
+                                                        }
+                                                        
+                                                        
+                                                        $InvoiceNoteSql = "SELECT invoice_note FROM tbl_invoice_note WHERE order_id='$OrderId' ";
+                                                        $InvoiceNotesrs=$conn->query($InvoiceNoteSql);
+                                                        if($INrow=$InvoiceNotesrs->fetch_array())
+                                                        {
+                                                            $Invoice_Note=$INrow[0];  
+                                                        }else{
+                                                            $Invoice_Note=NULL;  
                                                         }
                                                         
                                                         
@@ -191,6 +201,22 @@
                                                     <td><?php echo $RouteName; ?></td>
                                                     <td><?php echo $InvoiceDate; ?></td>
                                                     <td class="text-right" style="font-weight: 600;">Rs. <?php echo number_format($GrandTotal,2); ?></td>
+                                                     <td>
+                                                            <?php if ($Invoice_Note != null) {
+                                                            ?>
+                                                                <p>
+                                                                    <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                                        Note
+                                                                    </a>
+
+                                                                </p>
+                                                            <?php } ?>
+                                                            <div class="collapse" id="collapseExample">
+
+                                                                <?php echo $Invoice_Note; ?>
+
+                                                            </div>
+                                                        </td>
                                                     <td><a href="invoice?i=<?php echo base64_encode($Id); ?>" class="btn btn-secondary btn-sm" style="color: #FFF;">View</a></td>
                                                 </tr>                   
                                                 <?php } ?>
@@ -288,7 +314,7 @@
     <script>
         $(document).ready( function () {
             $('#InvoiceTable').DataTable({
-                "order": [[ 0, "desc" ]],
+                "order": [[ 7, "desc" ]],
                     dom: 'Bfrtip',
                     buttons: [
                         // 'copy', 'csv', 'excel', 'pdf', 'print'

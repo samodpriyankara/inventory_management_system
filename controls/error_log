@@ -30,3 +30,14 @@
 [21-Feb-2024 09:48:19 Asia/Colombo] PHP Notice:  Undefined index: DISTRIBUTOR in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/controls/download_emp_attendance_summary_for_date.php on line 18
 [22-Feb-2024 17:24:52 Asia/Colombo] PHP Notice:  Undefined index: DISTRIBUTOR in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/controls/download_emp_attendance_summary_for_date.php on line 18
 [09-Jul-2024 12:47:54 Asia/Colombo] PHP Notice:  Undefined index: DISTRIBUTOR in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/controls/download_emp_attendance_summary_for_date.php on line 18
+[11-Oct-2024 11:01:09 Asia/Colombo] PHP Fatal error:  Uncaught Error: Call to a member function fetch_array() on bool in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/controls/download_emp_attendance_summary_for_date.php:41
+Stack trace:
+#0 {main}
+  thrown in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/controls/download_emp_attendance_summary_for_date.php on line 41
+[29-Oct-2024 14:07:24 Asia/Colombo] PHP Notice:  Undefined index: DISTRIBUTOR in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/controls/download_emp_attendance_summary_for_date.php on line 18
+[29-Oct-2024 14:25:21 Asia/Colombo] PHP Notice:  Undefined index: DISTRIBUTOR in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/controls/download_emp_attendance_summary_for_date.php on line 18
+[29-Oct-2024 14:25:39 Asia/Colombo] PHP Notice:  Undefined index: DISTRIBUTOR in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/controls/download_emp_attendance_summary_for_date.php on line 18
+[29-Oct-2024 14:39:49 Asia/Colombo] PHP Notice:  Undefined index: DISTRIBUTOR in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/controls/download_emp_attendance_summary_for_date.php on line 18
+[08-Nov-2024 10:40:42 Asia/Colombo] PHP Notice:  Undefined index: DISTRIBUTOR in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/controls/download_emp_attendance_summary_for_date.php on line 18
+[08-Nov-2024 10:45:33 Asia/Colombo] PHP Notice:  Undefined index: DISTRIBUTOR in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/controls/download_emp_attendance_summary_for_date.php on line 18
+[25-Nov-2024 11:41:51 Asia/Colombo] PHP Notice:  Undefined index: DISTRIBUTOR in /home/hnvaslagu2q8/amazofttestcloud.com/clients/goallankassm/controls/download_emp_attendance_summary_for_date.php on line 18

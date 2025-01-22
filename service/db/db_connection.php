@@ -2,12 +2,20 @@
 
 class DB {
 	
+// 	protected $db_name = 'testapp';
+// 	protected $db_user = 'amazoftdev';
+// 	protected $db_pass = 'Amazoft@dev';
+// 	protected $db_host = 'localhost';
 	
-
-	protected $db_name = 'goallankassm';
-	protected $db_user = 'goallankassm';
-	protected $db_pass = 'h#J7c4H-d(ZI';
+	protected $db_name = 'goallanka-nov-18';
+	protected $db_user = 'amazoftdev';
+	protected $db_pass = 'Amazoft@dev';
 	protected $db_host = 'localhost';
+
+// 	protected $db_name = 'goallankassm';
+// 	protected $db_user = 'goallankassm';
+// 	protected $db_pass = 'h#J7c4H-d(ZI';
+// 	protected $db_host = 'localhost';
 
 
 	// protected $db_name = 'salespad_db_demo';

@@ -55,7 +55,7 @@
                     </div> -->
                     <div class="row">
                         <div class="col-md-6">
-                            <h3>View Distributor Stock</h3>
+                            <h3>View Stock</h3>
                         </div>
                         <!-- <div class="col-md-6">
                             <div class="pull-right" style="float: right;">

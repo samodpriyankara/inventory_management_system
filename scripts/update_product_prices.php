@@ -163,7 +163,7 @@ session_start();
 
 					
 					if($conn->query("INSERT INTO tbl_free_issue_scheme VALUES(null,'$f_margin','$f_qty','$p_id',1,'$f_margin1','$f_margin2','$f_margin3','$f_margin4','$f_margin5',
-					                                                               '$f_qty1','$f_qty2','$f_qty3','$f_qty4','$f_qty5',,'$tbl_discount',1,'$tbl_discount_margin')")){
+					                                                               '$f_qty1','$f_qty2','$f_qty3','$f_qty4','$f_qty5','$tbl_discount',1,'$tbl_discount_margin')")){
 
 						$output['result']=true;
 						$output['msg']="Successfully updated.";

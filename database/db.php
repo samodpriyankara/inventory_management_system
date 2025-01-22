@@ -2,34 +2,23 @@
 
 class DB {
 	
-	protected $db_name = 'goallanka_new';
-	protected $db_user = 'root';
-	protected $db_pass = '';
-	protected $db_host = 'localhost';
-	
-
-// 	protected $db_name = 'besthote_lasantha_distributors';
-// 	protected $db_user = 'root';
-// 	protected $db_pass = '';
+// 	protected $db_name = 'goallankassm';
+// 	protected $db_user = 'goallankassm';
+// 	protected $db_pass = 'h#J7c4H-d(ZI';
 // 	protected $db_host = 'localhost';
-
-	// protected $db_name = 'salespad_db_demo';
-	// protected $db_user = 'root';
-	// protected $db_pass = '';
-	// protected $db_host = 'localhost';
+	
+// 	protected $db_name = 'testapp';
+// 	protected $db_user = 'amazoftdev';
+// 	protected $db_pass = 'Amazoft@dev';
+// 	protected $db_host = 'localhost';
 	
 	
-	// private $db_name = 'salespad_db_lakmeeexports';
-	// private $db_user = 'root';
-	// private $db_pass = 'Admin123$';
-	// private $db_host = 'localhost';
-	// private $connect_db = null;
+	protected $db_name = 'goallanka-nov-18';
+	protected $db_user = 'amazoftdev';
+	protected $db_pass = 'Amazoft@dev';
+	protected $db_host = 'localhost';
 
-	// private $db_name = 'salespad_db_gandr';
-	// private $db_user = 'root';
-	// private $db_pass = '';
-	// private $db_host = 'localhost';
-	// private $connect_db = null;
+
 	
 	
 	public function connect() {
